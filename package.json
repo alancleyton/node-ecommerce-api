@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:alancleyton/node-ecommerce-api.git",
   "author": "Alan Cleyton <alancleyton67@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
 }
