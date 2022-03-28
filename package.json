@@ -1,0 +1,9 @@
+{
+  "name": "node-ecommerce-api",
+  "description": "Node E-commerce API",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:alancleyton/node-ecommerce-api.git",
+  "author": "Alan Cleyton <alancleyton67@gmail.com>",
+  "license": "MIT"
+}
