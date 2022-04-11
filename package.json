@@ -8,13 +8,17 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --watch",
+    "test:staged": "jest --passWithNoTests",
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
     "start": "node dist/server.js",
     "build": "yarn run type:check && yarn run build:js",
     "build:js": "babel src --copy-files --no-copy-ignored --out-dir dist --extensions \".ts\"",
     "build:types": "tsc --emitDeclarationOnly",
     "type:check": "tsc --noEmit",
-    "lint": "eslint src/**/*.ts --fix"
+    "lint": "eslint src/**",
+    "lint:fix": "eslint 'src/**' --fix",
+    "lint:prettier": "prettier src/** --write",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -33,7 +37,9 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "ts-jest": "^27.1.4",
     "ts-node-dev": "^1.1.8",
