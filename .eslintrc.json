@@ -32,7 +32,7 @@
       }
     }
   },
-  "ignorePatterns": ["**/*.config.js"],
+  "ignorePatterns": ["**/*.config.js", "**/*.d.ts"],
   "rules": {
     "prettier/prettier": "error",
     "import/prefer-default-export": "off",
