@@ -16,6 +16,23 @@ Simple E-commerce API with Node, Typescript, Express.
 ```bash
   yarn dev
 ```
+
+# Run Docker services
+Using `Makefile` and `docker compose` to builds and starts a service container.
+```bash
+  make up
+```
+
+Stops and removes a service container.
+```bash
+  make down
+```
+
+Displays log output from services.
+```bash
+  make logs
+```
+
 # Build and run project for production
 1. Transpile and compiles files for production.
 ```bash

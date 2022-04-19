@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: postgresql_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - ${DB_PORT}:5432
