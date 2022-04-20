@@ -9,8 +9,8 @@
   "scripts": {
     "tests": "jest --watch",
     "test:staged": "jest --passWithNoTests",
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
-    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/infrastructure/http/server.ts",
+    "start": "node dist/infrastructure/http/server.js",
     "build": "yarn run type:check && yarn run build:js",
     "build:js": "babel src --copy-files --no-copy-ignored --out-dir dist --extensions \".ts\"",
     "build:types": "tsc --emitDeclarationOnly",
