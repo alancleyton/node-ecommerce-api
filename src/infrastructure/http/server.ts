@@ -1,4 +1,11 @@
+import 'reflect-metadata';
+import 'dotenv/config';
 import expressApplication from '../express/express-application';
+import { AppDataSource } from '../typeorm/data-source';
+
+AppDataSource.initialize()
+  .then()
+  .catch(error => console.log(error));
 
 const { app } = expressApplication;
 
