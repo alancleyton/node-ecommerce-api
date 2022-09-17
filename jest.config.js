@@ -8,7 +8,7 @@ module.exports = {
   resetMocks: true,
   coverageProvider: 'babel',
   collectCoverageFrom: [
-    '/app/**/*.ts',
+    '/src/**/*.ts',
     '!**/node_modules/**',
     '!**/dist/**'
   ],
