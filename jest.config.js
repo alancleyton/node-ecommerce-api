@@ -13,7 +13,7 @@ module.exports = {
     '!**/dist/**'
   ],
   coverageDirectory: 'coverage',
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/tests'],
   transform: {
     '.+\\.ts$': 'ts-jest'
   },

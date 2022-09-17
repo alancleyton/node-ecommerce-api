@@ -7,10 +7,10 @@
   "author": "Alan Cleyton <alancleyton67@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "tests": "jest --watch",
+    "test": "jest --watch",
     "test:staged": "jest --passWithNoTests",
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/infrastructure/http/server.ts",
-    "start": "node dist/infrastructure/http/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "start": "node dist/server.js",
     "build": "yarn run type:check && yarn run build:js",
     "build:js": "babel src --copy-files --no-copy-ignored --out-dir dist --extensions \".ts\"",
     "build:types": "tsc --emitDeclarationOnly",
@@ -21,8 +21,8 @@
     "prepare": "husky install",
     "typeorm": "typeorm-ts-node-commonjs",
     "typeorm:migration:create": "yarn typeorm migration:create",
-    "typeorm:migration:run": "yarn typeorm migration:run -d src/infrastructure/typeorm/data-source.ts",
-    "typeorm:migration:revert": "yarn typeorm migration:revert -d src/infrastructure/typeorm/data-source.ts"
+    "typeorm:migration:run": "yarn typeorm migration:run -d src/database/data-source.ts",
+    "typeorm:migration:revert": "yarn typeorm migration:revert -d src/database/data-source.ts"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -30,6 +30,7 @@
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
@@ -54,6 +55,7 @@
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-decorators": "^7.17.9",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "pg": "^8.7.3",
