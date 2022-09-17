@@ -8,12 +8,12 @@ module.exports = {
   resetMocks: true,
   coverageProvider: 'babel',
   collectCoverageFrom: [
-    '/src/**/*.ts',
+    '/app/**/*.ts',
     '!**/node_modules/**',
     '!**/dist/**'
   ],
   coverageDirectory: 'coverage',
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/tests'],
   transform: {
     '.+\\.ts$': 'ts-jest'
   },

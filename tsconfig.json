@@ -4,7 +4,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "types": ["node", "jest"],
-    "rootDir": "src",
     "allowJs": true,
     "outDir": "dist",
     "esModuleInterop": true,
@@ -22,6 +21,6 @@
     "lib": ["ES2021"],
     "declaration": true,
   },
-  "include": ["src/**/*.ts", "**/*.d.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts", "**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { join } from 'path';
 import { DataSource } from 'typeorm';
-import { Product } from '../../domain/product/product-entity';
+import { Product } from '../resources/product/product-entity';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -11,7 +11,7 @@ export const AppDataSource = new DataSource({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   entities: [Product],
-  migrations: [join(__dirname, '**', '..', '..', '..', 'infrastructure/typeorm/migrations/*.{ts,js}')],
+  migrations: [join(__dirname, '**', '..', '..', 'database/migrations/*.{ts,js}')],
   subscribers: [],
   synchronize: false,
   migrationsRun: false,
