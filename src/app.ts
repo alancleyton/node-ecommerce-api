@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import { AppDataSource } from './database/data-source';
+import routes from './routes';
 
 class App {
   public app: Application;
@@ -16,6 +17,7 @@ class App {
     this.app.use(express.json());
     this.app.use(cors());
     this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(routes);
   }
 
   // Initialize initial connection with the database.
